@@ -3,12 +3,24 @@
     "description": "Skeleton application for BEAR.Sunday",
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+		"bear/framework": "0.7.0",
+		"bear/package": "0.7.0"		
     },
     "autoload": {
         "psr-0": { "Skeleton": "src" }
     },
     "scripts"   :{
         "post-install-cmd": "Skeleton\\Installer\\Composer::postInstall"
-    }
+    },
+    "repositories":[
+        {
+            "type": "git",
+            "url": "https://github.com/BEARSunday/BEAR.Sunday.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/BEARSunday/BEAR.Package.git"
+        }
+    ]
 }
